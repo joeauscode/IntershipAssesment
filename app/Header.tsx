@@ -1,0 +1,74 @@
+"use client";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from "next/image";
+
+
+
+
+const Header = () => {
+
+  const Goto = () => {
+   window.location.href="/"
+  }
+
+
+  const [display, setDisplay] = useState(false)
+
+  const  shownav = () => {
+    setDisplay(prev => !prev)
+  }
+
+  
+
+  return (
+    <div className='bg-[#F9F5E9] hover:bg-[#E5B769] transition-colors duration-300 shadow-md fixed top-0 right-0 left-0'>
+      <div className="flex justify-between w-[90%] mx-auto align-middle text-xl p-5">
+
+        <div className="cursor-pointer" onClick={Goto}>
+           <Image onClick={() => setDisplay(false)} src="/image/logo.png" 
+            alt="Logo" 
+            width={120} 
+            height={50} 
+            priority
+          />
+        </div>
+
+      <div className="flex gap-4 ml-23">
+       <Link onClick={() => setDisplay(false)} href="/" className='hover:text-white'>Home</Link>
+        <div className="flex justify-center flex-col text-center relative">
+       <span onClick={shownav} className='hover:text-white cursor-pointer'>Shop</span>
+       
+       {display && (
+    
+        <ul className='list-none absolute top-[170%] left-[-84%]  w-[120px] bg-[#E5B769] flex flex-col gap-2.5' >
+          <li className="hover:text-[#F9F5E9]" onClick={() => setDisplay(false)}><Link href="/">Dogs</Link></li>
+           <li className="hover:text-[#F9F5E9]" onClick={() => setDisplay(false)}> <Link href="/">Cats</Link></li>
+            <li className="hover:text-[#F9F5E9]" onClick={() => setDisplay(false)}><Link href="/">Birds</Link></li>
+            <li className="hover:text-[#F9F5E9] mb-4 " onClick={() => setDisplay(false)}><Link href="/">Small Pets</Link></li>
+        </ul>
+       
+       )}
+  </div>
+       <Link onClick={() => setDisplay(false)} href="about" className='hover:text-white'>About</Link>
+       <Link  onClick={() => setDisplay(false)} href="/blog" className='hover:text-white'>Blog</Link>
+       
+      </div>
+
+
+      <div className="flex gap-2">
+         <div className="Signup">
+          <button className='cursor-pointer hover:text-white'  onClick={() => setDisplay(false)}>Sign Up</button>
+         </div>
+            |
+         <div className="Login">
+            <button className='cursor-pointer hover:text-white' onClick={() => setDisplay(false)}>Log-In</button>
+         </div>
+      </div>
+
+      </div>
+    </div>
+  )
+}
+
+export default Header
