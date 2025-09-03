@@ -14,6 +14,7 @@ export default function Footer() {
           width={120}
           height={50}
           priority
+           style={{ width: "auto", height: "auto" }}
         />
 
       </div>

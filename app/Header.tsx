@@ -30,6 +30,7 @@ const Header = () => {
             alt="Logo" 
             width={120} 
             height={50} 
+             style={{ width: "auto", height: "auto" }}
             priority
           />
         </div>
@@ -42,7 +43,7 @@ const Header = () => {
        {display && (
     
         <ul className='list-none absolute top-[170%] left-[-84%]  w-[120px] bg-[#1f2937] flex flex-col gap-2.5 text-[#F5DEB3]' >
-          <li className="hover:text-[#F9F5E9]" onClick={() => setDisplay(false)}><Link href="/">Dogs</Link></li>
+          <li className="hover:text-[#F9F5E9]" onClick={() => setDisplay(false)}><Link href="/dog">Dogs</Link></li>
            <li className="hover:text-[#F9F5E9]" onClick={() => setDisplay(false)}> <Link href="/">Cats</Link></li>
             <li className="hover:text-[#F9F5E9]" onClick={() => setDisplay(false)}><Link href="/">Birds</Link></li>
             <li className="hover:text-[#F9F5E9] mb-4 " onClick={() => setDisplay(false)}><Link href="/">Small Pets</Link></li>
