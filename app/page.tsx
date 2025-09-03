@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { BsChatDotsFill } from "react-icons/bs";
-import bgImage from "../public/image/background.jpg";
+
 
 
 export default function Hero() {
@@ -53,11 +53,16 @@ export default function Hero() {
   }
 
   return (
-    <div
-      className="bg-cover bg-center h-screen w-full"
-      style={{ backgroundImage: `url(${bgImage.src})` }}
-    >
+    <div className="relative h-screen w-full overflow-hidden">
 
+  <video
+    src="/bg.mp4"  
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  />
 
       <div className="chatbox fixed bottom-10 right-4 w-[300px] p-1.5 shadow-lg"  onClick={openchat}>
        <span className='flex justify-end text-6xl text-[green] cursor-pointer'><BsChatDotsFill /></span>
@@ -124,7 +129,7 @@ export default function Hero() {
   );
 }
 
-// bg-[url('/images/bg.jpg')] bg-cover bg-center h-screen w-full"
+
 // https://www.uidesigndaily.com/posts/figma-billing-page-payment-day-1585
 // https://pngtree.com
 // https://www.freepik.com
