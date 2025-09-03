@@ -65,7 +65,7 @@ export default function Hero() {
   />
 
       <div className="chatbox fixed bottom-10 right-4 w-[300px] p-1.5 shadow-lg"  onClick={openchat}>
-       <span className='flex justify-end text-6xl text-[green] cursor-pointer'><BsChatDotsFill /></span>
+       <span className='flex justify-end text-6xl text-[#22C55E] cursor-pointer'><BsChatDotsFill /></span>
       </div>
 
 {displayChat && (

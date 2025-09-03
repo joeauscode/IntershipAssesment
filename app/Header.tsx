@@ -34,7 +34,7 @@ const Header = () => {
           />
         </div>
 
-      <div className="flex gap-4 ml-10 items-center">
+      <div className="flex gap-10 ml-10 items-center">
        <Link onClick={() => setDisplay(false)} href="/" className='hover:text-white'>Home</Link>
         <div className="flex justify-center flex-col text-center relative">
        <span onClick={shownav} className='hover:text-white cursor-pointer'>Shop</span>
@@ -56,13 +56,13 @@ const Header = () => {
       </div>
 
 
-      <div className="flex gap-2">
+      <div className="flex gap-5">
          <div className="Signup">
-          <button className='cursor-pointer hover:text-white'  onClick={() => setDisplay(false)}>Sign Up</button>
+          <Link href='/signin'className='cursor-pointer hover:text-white'  onClick={() => setDisplay(false)}>Sign Up</Link>
          </div>
             |
          <div className="Login">
-            <button className='cursor-pointer hover:text-white' onClick={() => setDisplay(false)}>Log-In</button>
+            <Link href='/signin' className='hover:text-white' onClick={() => setDisplay(false)}>Log-In</Link>
          </div>
       </div>
 
