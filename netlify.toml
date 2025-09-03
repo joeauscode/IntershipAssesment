@@ -1,3 +1,12 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
+  # cache .next/cache so builds are faster
+  [build.environment]
+    NEXT_CACHE = ".next/cache"
+
+# ✅ Redirect all routes to Next.js handler
 [[redirects]]
   from = "/*"
   to = "/index.html"
