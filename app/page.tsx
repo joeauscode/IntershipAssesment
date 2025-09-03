@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { BsChatDotsFill } from "react-icons/bs";
 
@@ -64,7 +65,20 @@ export default function Hero() {
     className="absolute top-0 left-0 w-full h-full object-cover"
   />
 
-      <div className="chatbox fixed bottom-10 right-4 w-[300px] p-1.5 shadow-lg"  onClick={openchat}>
+  <div className="relative z-20 top-40 text-[whitesmoke] text-xl w-[80%] mx-auto flex flex-col gap-4">
+    <p className='font-bold text-[24px] text-[#F5DEB3]'>Because Every Home Deserves a Friend</p>
+     <div className='w-[50%]'>
+      <span>A pet is more than just a companion — it’s family. From wagging tails to gentle purrs, they bring laughter, comfort, and endless memories. Whether you’re looking for playful energy or calm affection, the perfect friend is waiting for you here.</span>
+    
+    <div className='flex gap-10 mt-2 items-center'>
+      <Link href="/shop"><button className='bg-blue-500 hover:bg-blue-600 text-white border-0 rounded-2xl cursor-pointer py-[10px] px-[20px]'>Explore</button></Link>
+     <Link href="/shop"><button className='bg-blue-500 hover:bg-blue-600 text-white cursor-pointer rounded-2xl border-0 py-[10px] px-[25px]'>Shop</button></Link>
+    </div>
+
+     </div>
+  </div>
+
+      <div className="chatbox fixed bottom-10 right-4 w-[300px] p-1.5"  onClick={openchat}>
        <span className='flex justify-end text-6xl text-[#22C55E] cursor-pointer'><BsChatDotsFill /></span>
       </div>
 
