@@ -49,7 +49,7 @@ export default function ChatBox() {
     <>
       {/* Floating Button */}
    
-      <div className="chatbox fixed bottom-10 right-4 w-[300px] p-1.5 z-50"  onClick={openchat}>
+      <div className="chatbox fixed bottom-10 right-4 w-[300px] p-1.5"  onClick={openchat}>
        <span className='flex justify-end text-6xl text-[#22C55E] cursor-pointer'><BsChatDotsFill /></span>
       </div>
 

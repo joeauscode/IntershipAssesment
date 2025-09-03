@@ -59,11 +59,11 @@ const Header = () => {
 
       <div className="flex gap-5">
          <div className="Signup">
-          <Link href='/signin'className='cursor-pointer hover:text-white'  onClick={() => setDisplay(false)}>Sign Up</Link>
+          <Link href='/signup'className='cursor-pointer hover:text-white'  onClick={() => setDisplay(false)}>Sign Up</Link>
          </div>
             |
          <div className="Login">
-            <Link href='/signin' className='hover:text-white' onClick={() => setDisplay(false)}>Log-In</Link>
+            <Link href='/login' className='hover:text-white' onClick={() => setDisplay(false)}>Log-In</Link>
          </div>
       </div>
 
