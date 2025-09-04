@@ -9,10 +9,11 @@ export default function Dog() {
   
    <div className="bg-gray-100 border-1 border-gray-200">
     
-    <p className="text-gray-600 mt-23 mb-5 w-[80%] mx-auto font-bold text-xl">
+    <p className="md:text-gray-600 mt-23 mb-5 w-[80%] mx-auto font-bold text-xl">
         Find your perfect furry friend at the best prices
       </p>
-   <div className="w-[80%] mx-auto gap-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
+   <div className="w-[80%] mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
     
     <div className="border border-gray-300 shadow-md mb-10 flex flex-col gap-2 w-[100%] " >
       <div className=" bg-gray-200">
