@@ -13,7 +13,7 @@ const gotoRegister = () => {
   
    <>
            <div className=" border-1 border-[black/40] bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md mt-30 mb-20">
+          <div className="bg-white rounded-2xl shadow-lg p-8 w-[90%] max-w-md mt-30 mb-20 ">
             <div className="flex justify-between items-center mb-6">
               <p className="text-xl font-bold text-gray-800">Sign in</p>
               <span
